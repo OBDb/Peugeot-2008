@@ -14,11 +14,14 @@ The directory is organized as follows:
 ```plaintext
 signalsets/
   └── v3/
-      ├── default.json        # General configuration (default)
-      ├── 2013-2019.json      # Configuration for Phase 1 (2013-2019)
-      └── 2020+.json          # Configuration for Phase 2 (2020+)
+      ├── default.json        # Default configuration (applies to Phase 2 and future models)
+      └── 2013-2019.json      # Override configuration for Phase 1 (2013-2019)
 ```
-The **default.json** file serves as a general configuration, while the specific files such as `2013-2019.json` and `2020+.json` allow tools like Sidecar to select the correct configurations based on model year or version.
+- **default.json**: Acts as the primary configuration file, covering models from 2020 onwards (Phase II). This file will serve as the default fallback for any years not specified by an override file.
+
+- **2013-2019.json**: A specific configuration override for Phase I models (2013-2019), differentiating these years from the baseline configuration in `default.json`.
+
+If a new configuration is required in the future (e.g., for model years 2028 and beyond), a new JSON file (e.g., `2020-2027.json`) can be created to lock in the 2020-2027 model configuration, allowing `default.json` to reflect the latest specifications.
 
 ## Usage
 Each JSON file in the `v3/` directory corresponds to a specific model year range. This structure enables compatibility with various vehicle parameters and model phases. If new versions of the Peugeot 2008 are released, they can be easily integrated by adding new JSON files, e.g., `2025+.json`.
