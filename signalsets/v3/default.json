@@ -6,5 +6,9 @@
     { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "0D"}, "freq": 0.25,
       "signals": [
         {"id": "2008_VSS", "path": "Movement", "fmt": { "len": 8, "min": 0,"max": 255, "div": 4, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+      ]},
+    { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "A6"}, "freq": 1,
+      "signals": [
+        {"id": "2008_ODO", "path": "Trips", "fmt": { "len": 32, "max": 429496729.5, "div": 10, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
       ]}
     ]}
