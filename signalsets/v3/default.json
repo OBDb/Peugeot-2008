@@ -1,6 +1,10 @@
 { "commands": [
+    { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "0C"}, "freq": 0.25,
+      "signals": [
+        {"id": "2008_RPM", "path": "Engine", "fmt": { "len": 16, "max": 16383.75, "div": 4, "unit": "rpm" }, "name": "Engine RPM", "suggestedMetric": "rpm"}
+      ]},
     { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "0D"}, "freq": 0.25,
       "signals": [
-        {"id": "2008_VSS", "path": "Movement", "fmt": { "len": 8, "min": 0,"max": 255, "div": 1, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+        {"id": "2008_VSS", "path": "Movement", "fmt": { "len": 8, "min": 0,"max": 255, "div": 4, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
       ]}
     ]}
