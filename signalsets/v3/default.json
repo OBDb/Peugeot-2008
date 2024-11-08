@@ -1,2 +1,6 @@
-{ "commands": []
-}
+{ "commands": [
+    { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "0D"}, "freq": 0.25,
+      "signals": [
+        {"id": "2008_VSS", "path": "Movement", "fmt": { "len": 8, "min": 0,"max": 255, "div": 1, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+      ]}
+    ]}
