@@ -1,10 +1,23 @@
 { "commands": [
     { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "0C"}, "freq": 0.25,
       "signals": [
-        {"id": "2008_RPM", "path": "Engine", "fmt": { "len": 16, "max": 16383.75, "div": 4, "unit": "rpm" }, "name": "Engine RPM", "suggestedMetric": "rpm"}
+        {"id": "2008_RPM", "path": "Engine", "fmt": { "len": 16, "max": 16383.75, "div": 4, "unit": "rpm" }, "name": "Engine RPM", "suggestedMetric": "rpm", "description": "Current vehicle RPM."}
       ]},
     { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "0D"}, "freq": 0.25,
       "signals": [
-        {"id": "2008_VSS", "path": "Movement", "fmt": { "len": 8, "min": 0,"max": 255, "div": 4, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
-      ]}
+        {"id": "2008_VSS", "path": "Movement", "fmt": { "len": 8, "min": 0,"max": 255, "div": 4, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed", "description": "Current vehicle speed."}
+      ]},
+    { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "04"}, "freq": 0.25,
+      "signals": [
+        {"id": "2008_LOAD_PCT", "path": "Engine", "fmt": { "len": 8, "max": 100, "mul": 100, "div": 255, "unit": "percent" }, "name": "Calculated engine load", "description": "Represents the amount of work the engine is doing. Expected to reach 100% at wide open throttle/wide open pedal at any altitude, temperature or rpm for both naturally aspirated and boosted engines. If engine load is limited for powertrain protection e.g. engine/turbocharger protection, this value may not reach 100%. For hybrid vehicles, indicates the torque produced only by the internal combustion engine, not the torque being delivered by the entire powertrain. For electric vehicles, the meaning of this parameter is undefined."}
+      ]},      
+    { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "05"}, "freq": 0.5,
+      "signals": [
+        {"id": "2008_ECT", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature", "description": "Your engine temperature must operate within a certain temperature range to operate efficiently and safely. If it runs too hot, then your engine could be permanently damaged. If it runs too cold, then your engine will use more fuel than necessary."}
+      ]},
+    { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "1F"}, "freq": 1,
+      "signals": [
+        {"id": "2008_RUNTM", "path": "Clocks", "fmt": { "len": 16, "max": 65535, "div": 1, "unit": "seconds" }, "name": "Time since engine start", "description": "How long it's been since the engine started."}
+      ]}   
     ]}
+# Confirmed non working commands with 2008 Phase I - BAT_SOC, BAT_SOH, ODO, ALCH_PCT, EXH_RATE, FUEL_RATE, FUEL_RATE_ALT, FLI, VFUEL_RATE
