@@ -20,4 +20,4 @@
         {"id": "2008_RUNTM", "path": "Clocks", "fmt": { "len": 16, "max": 65535, "div": 1, "unit": "seconds" }, "name": "Time since engine start", "description": "How long it's been since the engine started."}
       ]}   
     ]}
-# Confirmed non working commands with 2008 Phase I - BAT_SOC, BAT_SOH, ODO, ALCH_PCT, EXH_RATE, FUEL_RATE, FUEL_RATE_ALT, FLI, VFUEL_RATE
+// Confirmed non working commands with 2008 Phase I - BAT_SOC, BAT_SOH, ODO, ALCH_PCT, EXH_RATE, FUEL_RATE, FUEL_RATE_ALT, FLI, VFUEL_RATE
