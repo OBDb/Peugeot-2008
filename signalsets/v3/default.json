@@ -15,4 +15,8 @@
       "signals": [
         {"id": "2008_ECT", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature", "description": "Your engine temperature must operate within a certain temperature range to operate efficiently and safely. If it runs too hot, then your engine could be permanently damaged. If it runs too cold, then your engine will use more fuel than necessary."}
       ]},
-    ]}
+    { "hdr": "7E0", "rax": "7E8", "cmd": {"01": "42"}, "freq": 0.25,
+      "signals": [
+        {"id": "VPWR", "path": "Battery", "fmt": { "len": 16, "max": 65535, "div": 1000, "unit": "volts" }, "name": "Control module voltage", "description": "Power input to the OBD control module. VPWR is normally battery voltage, less any voltage drop in the circuit between the battery and the control module."}
+      ]} 
+    ]
