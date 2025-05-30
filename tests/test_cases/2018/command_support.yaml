@@ -46,7 +46,7 @@ supported_commands_by_ecu:
   - 014E:CLR_TIME
 unsupported_commands_by_ecu:
   6B4:
-  - 6B4.694.22D410
+  - 6B4.694.22D410:PEUGEOT_HVBAT_SOC
   7F1:
   - 7F1.2240B1
   - 7F1.2240B2
