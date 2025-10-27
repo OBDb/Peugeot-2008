@@ -1,0 +1,42 @@
+command_id: 7E0.0172
+test_cases:
+- expected_values:
+    WG_A_ACT: 100
+    WG_A_ACT_SUP: 1
+    WG_A_CMD: 6.66667
+    WG_A_CMD_SUP: 1
+    WG_B_ACT: 0
+    WG_B_ACT_SUP: 0
+    WG_B_CMD: 0
+    WG_B_CMD_SUP: 0
+  response: 7E80741720311FF0000
+- expected_values:
+    WG_A_ACT: 100
+    WG_A_ACT_SUP: 1
+    WG_A_CMD: 16.07843
+    WG_A_CMD_SUP: 1
+    WG_B_ACT: 0
+    WG_B_ACT_SUP: 0
+    WG_B_CMD: 0
+    WG_B_CMD_SUP: 0
+  response: 7E80741720329FF0000
+- expected_values:
+    WG_A_ACT: 100
+    WG_A_ACT_SUP: 1
+    WG_A_CMD: 67.05882
+    WG_A_CMD_SUP: 1
+    WG_B_ACT: 0
+    WG_B_ACT_SUP: 0
+    WG_B_CMD: 0
+    WG_B_CMD_SUP: 0
+  response: 7E807417203ABFF0000
+- expected_values:
+    WG_A_ACT: 100
+    WG_A_ACT_SUP: 1
+    WG_A_CMD: 75.29412
+    WG_A_CMD_SUP: 1
+    WG_B_ACT: 0
+    WG_B_ACT_SUP: 0
+    WG_B_CMD: 0
+    WG_B_CMD_SUP: 0
+  response: 7E807417203C0FF0000
