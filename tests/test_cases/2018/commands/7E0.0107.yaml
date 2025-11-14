@@ -1,14 +1,14 @@
 command_id: 7E0.0107
 test_cases:
 - expected_values:
-    LONGFT1: 1.5625
+    LONGFT1: -26.4375
   response: '7E80441078200'
 - expected_values:
-    LONGFT1: 1.5625
+    LONGFT1: -26.4375
   response: '7E80441078229'
 - expected_values:
-    LONGFT1: 1.5625
+    LONGFT1: -26.4375
   response: 7E804410782C0
 - expected_values:
-    LONGFT1: 3.90625
+    LONGFT1: -24.09375
   response: '7E80441078520'
