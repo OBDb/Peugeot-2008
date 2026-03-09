@@ -1,14 +1,14 @@
 command_id: 6B4.694.22D410
 test_cases:
 - expected_values:
-    PEUGEOT_HVBAT_SOC: 16.18359
-  response: 6940562D410205E
+    PEUGEOT_HVBAT_SOC: 6.36914
+  response: 6940562D4100CBD
 - expected_values:
-    PEUGEOT_HVBAT_SOC: 47
-  response: 6940562D4105E00
+    PEUGEOT_HVBAT_SOC: 6.49805
+  response: 6940562D4100CFF
 - expected_values:
-    PEUGEOT_HVBAT_SOC: 75.99805
-  response: 6940562D41097FF
+    PEUGEOT_HVBAT_SOC: 33
+  response: 6940562D4104200
 - expected_values:
     PEUGEOT_HVBAT_SOC: 98.50195
   response: 6940562D410C501
