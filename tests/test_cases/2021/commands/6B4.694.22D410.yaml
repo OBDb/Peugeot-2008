@@ -7,8 +7,8 @@ test_cases:
     PEUGEOT_HVBAT_SOC: 6.49805
   response: 6940562D4100CFF
 - expected_values:
-    PEUGEOT_HVBAT_SOC: 33
-  response: 6940562D4104200
+    PEUGEOT_HVBAT_SOC: 22.5
+  response: 6940562D4102D00
 - expected_values:
     PEUGEOT_HVBAT_SOC: 98.50195
   response: 6940562D410C501
