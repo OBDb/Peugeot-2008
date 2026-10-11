@@ -1,4 +1,1580 @@
 { "commands": [
-
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D402"}, "freq": 1,
+  "signals": [
+    {"id": "2008_VSS", "path": "Movement", "fmt": { "len": 16, "max": 1000, "div": 10, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D434"}, "freq": 5,
+  "signals": [
+    {"id": "2008_AAT", "path": "Engine", "fmt": { "len": 8, "max": 127, "min": -128, "sign": true, "unit": "celsius" }, "name": "Ambient temperature"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D496"}, "freq": 5,
+  "signals": [
+    {"id": "2008_SERVICE_BAT_T", "path": "Battery", "fmt": { "len": 16, "max": 32767, "div": 2, "unit": "celsius" }, "name": "Service battery temperature"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D49C"}, "freq": 30,
+  "signals": [
+    {"id": "2008_ODO_6A2", "path": "Trips", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D802"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_VSS_ESP", "path": "Movement", "fmt": { "len": 16, "max": 511, "mul": 1953, "div": 250000, "unit": "kilometersPerHour" }, "name": "Vehicle speed, ESP", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D880"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_DRIVE_MOTOR_TQ_DES", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100, "sign": true, "unit": "newtonMeters" }, "name": "Drive motor torque, desired"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D8CD"}, "freq": 5,
+  "signals": [
+    {"id": "2008_DRIVE_MOTOR_STATOR_T", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Drive motor stator temperature"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D8CE"}, "freq": 5,
+  "signals": [
+    {"id": "2008_DC_DC_CONV_T", "path": "Transmission", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "DC-DC converter temperature"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D8D0"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_DRIVE_MOTOR_TQ_ACT", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Drive motor torque, actual"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D8D6"}, "freq": 5,
+  "signals": [
+    {"id": "2008_DRIVE_MOTOR_CLT_T", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Drive motor coolant inlet temperature"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D8D9"}, "freq": 1,
+  "signals": [
+    {"id": "2008_DRIVE_MOTOR_POWER", "path": "Engine", "fmt": { "len": 16, "max": 3276700, "min": -3276800, "mul": 100, "sign": true, "unit": "watts" }, "name": "Drive motor power"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D8E1"}, "freq": 5,
+  "signals": [
+    {"id": "2008_ON_BOARD_CHARGER_T", "path": "Battery", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "On-board charger temperature"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D8EF"}, "freq": 5,
+  "signals": [
+    {"id": "2008_BAT_T", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "celsius" }, "name": "Battery temperature"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D8F9"}, "freq": 5,
+  "signals": [
+    {"id": "2008_TRACTION_CIRCUIT_ECT", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "celsius" }, "name": "Traction circuit coolant temperature"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D8FB"}, "freq": 5,
+  "signals": [
+    {"id": "2008_ECT", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "celsius" }, "name": "Coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
+  ]},
+{ "hdr": "6A2", "rax": "682", "fcm1": true, "dbg": true, "cmd": {"22": "D8FF"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AC_HIGH_SIDE_P", "path": "Engine", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "bars" }, "name": "Air conditioning high side pressure"}
+  ]},
+{ "hdr": "6A6", "rax": "686", "fcm1": true, "dbg": true, "cmd": {"22": "D407"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ACCEL_PEDAL_POS", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Accelerator pedal position"}
+  ]},
+{ "hdr": "6A6", "rax": "686", "fcm1": true, "dbg": true, "cmd": {"22": "D49C"}, "freq": 30,
+  "signals": [
+    {"id": "2008_ODO_6A6", "path": "Trips", "fmt": { "len": 32, "max": 429496729, "div": 10, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "6A6", "rax": "686", "fcm1": true, "dbg": true, "cmd": {"22": "DC00"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_MOTOR_SPD", "path": "Movement", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "rpm" }, "name": "Motor speed"}
+  ]},
+{ "hdr": "6A6", "rax": "686", "fcm1": true, "dbg": true, "cmd": {"22": "DC04"}, "freq": 5,
+  "signals": [
+    {"id": "2008_INVERTER_T_CMD", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "sign": true, "unit": "celsius" }, "name": "Inverter temperature, commanded"}
+  ]},
+{ "hdr": "6A6", "rax": "686", "fcm1": true, "dbg": true, "cmd": {"22": "DC69"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ELEC_MACHINE_TQ_REDUCTION", "path": "Engine", "fmt": { "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "newtonMeters" }, "name": "Electric machine torque reduction"}
+  ]},
+{ "hdr": "6A6", "rax": "686", "fcm1": true, "dbg": true, "cmd": {"22": "DC6A"}, "freq": 5,
+  "signals": [
+    {"id": "2008_INVERTER_T_ESTIMATED", "path": "Engine", "fmt": { "len": 16, "max": 511, "min": -512, "div": 64, "sign": true, "unit": "celsius" }, "name": "Inverter temperature estimated"}
+  ]},
+{ "hdr": "6A6", "rax": "686", "fcm1": true, "dbg": true, "cmd": {"22": "DCB6"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ELEC_MACHINE_TQ", "path": "Engine", "fmt": { "len": 16, "max": 4915, "min": -1638, "div": 10, "add": -1638.3, "unit": "newtonMeters" }, "name": "Electric machine torque"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"22": "D400"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_RPM", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Engine RPM", "suggestedMetric": "engineSpeed"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D402"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_VSS_6A8", "path": "Movement", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D404"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CLU_PEDAL", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Clutch pedal"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D405"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ACCEL_PEDAL_SIG_1_V", "path": "Battery", "fmt": { "len": 16, "max": 6.55, "min": -6.55, "div": 5000.0001263106, "sign": true, "unit": "volts" }, "name": "Accelerator pedal signal 1 voltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D406"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ACCEL_PEDAL_SIG_2_V", "path": "Battery", "fmt": { "len": 16, "max": 6.55, "min": -6.55, "div": 5000.0001263106, "sign": true, "unit": "volts" }, "name": "Accelerator pedal signal 2 voltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D407"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ACCEL_PEDAL_POS_RECALCULATED", "path": "Movement", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "percent" }, "name": "Accelerator pedal position, recalculated"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D409"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CALC_GEAR_GEARBOX", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Calculated gear in gearbox"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D40A"}, "freq": 5,
+  "signals": [
+    {"id": "2008_ECT_CORRECTED", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Coolant temperature, corrected"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D40D"}, "freq": 5,
+  "signals": [
+    {"id": "2008_ECT_TGT", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Coolant temperature target"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D411"}, "freq": 5,
+  "signals": [
+    {"id": "2008_BOOST_AIR_T", "path": "Engine", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Boost air temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D412"}, "freq": 1,
+  "signals": [
+    {"id": "2008_STAT_INTERNAL_IGN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Status of internal ignition motor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D414"}, "freq": 5,
+  "signals": [
+    {"id": "2008_AAT_6A8", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Outside air temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D415"}, "freq": 5,
+  "signals": [
+    {"id": "2008_ECT_6A8", "path": "Engine", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Coolant temperature", "suggestedMetric": "engineCoolantTemperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D416"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ADDITIONAL_HEATER_1", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Additional heater control 1"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D417"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUXILIARY_HEATER_2", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Auxiliary heater 2 control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D418"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CAM_CRANK_POS", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Camshaft/crankshaft position synchronization"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D41A"}, "freq": 1,
+  "signals": [
+    {"id": "2008_START_PERMISSION", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Start permission from gearbox computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D41C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AC_COMP_CURRENT", "path": "Engine", "fmt": { "len": 8, "max": 6375, "mul": 25, "unit": "scalar" }, "name": "Air conditioning compressor current"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D41E"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ENG_OIL_LEVEL_SENS_V", "path": "Battery", "fmt": { "len": 16, "max": 6553, "min": -6553, "div": 5, "sign": true, "unit": "millivolts" }, "name": "Engine oil level sensor voltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D41F"}, "freq": 1,
+  "signals": [
+    {"id": "2008_FUEL_P", "path": "Fuel", "fmt": { "len": 16, "max": 32.76, "min": -32.76, "div": 999.9999525026, "sign": true, "unit": "bars" }, "name": "Fuel pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D421"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AC_P", "path": "Engine", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "bars" }, "name": "Air conditioning pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D422"}, "freq": 5,
+  "signals": [
+    {"id": "2008_ENG_CTRL_COMPUTER_V", "path": "Battery", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "volts" }, "name": "Engine control computer supply voltage", "suggestedMetric": "starterBatteryVoltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D423"}, "freq": 1,
+  "signals": [
+    {"id": "2008_5V_POWER_SUP_ST_1", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "5V power supply state number 1"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D424"}, "freq": 1,
+  "signals": [
+    {"id": "2008_5V_POWER_SUP_ST_2", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "5V power supply state number 2"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D425"}, "freq": 1,
+  "signals": [
+    {"id": "2008_5V_POWER_SUP_ST_3", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "5V power supply state number 3"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D426"}, "freq": 1,
+  "signals": [
+    {"id": "2008_5V_POWER_SUP_ST_4", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "5V power supply state number 4"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D429"}, "freq": 1,
+  "signals": [
+    {"id": "2008_OIL_P", "path": "Engine", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "bars" }, "name": "Oil pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D42A"}, "freq": 5,
+  "signals": [
+    {"id": "2008_FUEL_T", "path": "Fuel", "fmt": { "len": 16, "max": 6280, "min": -273, "div": 10, "add": -273.14, "unit": "celsius" }, "name": "Fuel temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D42F"}, "freq": 1,
+  "signals": [
+    {"id": "2008_GMV_ELEC_COOLING_FAN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Electric cooling fan control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D435"}, "freq": 5,
+  "signals": [
+    {"id": "2008_COMPUTER_T", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "celsius" }, "name": "Computer temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D438"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NEUTRAL_POS_SENS", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Neutral position sensor status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"22": "D43B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_OIL_P_REGULATION", "path": "Engine", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "percent" }, "name": "Oil pressure regulation control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D43C"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_REVERSE_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Reverse gear contactor status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D43D"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ENGAGED_GEAR", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engaged gear"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D43E"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_GEAR_PROCESS", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear in the process of engaging"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D43F"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MILEAGE_SINCE_OIL", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Mileage since last oil change"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D445"}, "freq": 1,
+  "signals": [
+    {"id": "2008_DES_HIGH_P_COMMON_P", "path": "Fuel", "fmt": { "len": 16, "max": 65535, "unit": "bars" }, "name": "Desired high pressure common rail fuel pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D446"}, "freq": 1,
+  "signals": [
+    {"id": "2008_HIGH_FUEL_P_MEAS", "path": "Fuel", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "bars" }, "name": "High fuel pressure measured"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D460"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AIR_METERING_VLV_TGT", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Air metering valve, target position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D461"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AIR_METERING_VLV", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Air metering valve duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D462"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CRANK_SPD", "path": "Movement", "fmt": { "len": 16, "max": 32767, "div": 2, "unit": "rpm" }, "name": "Crankshaft speed"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D463"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_BRAKE_SYSTEM_BACKUP", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Brake system backup contactor status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"22": "D464"}, "freq": 1,
+  "signals": [
+    {"id": "2008_OIL_P_REFERENCE", "path": "Engine", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "bars" }, "name": "Oil pressure reference value"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D465"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ATMOSPHERIC_P", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Atmospheric pressure"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D467"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SERVICE_BAT_CHG_STAT", "path": "Battery", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "percent" }, "name": "Service battery charge status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D469"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CLU_PEDAL_POS", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "percent" }, "name": "Clutch pedal position value"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D472"}, "freq": 1,
+  "signals": [
+    {"id": "2008_LOW_P_FUEL_PMP", "path": "Fuel", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Low pressure fuel pump actuator duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D474"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ABS_EKS_PROCESS_ADJ", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Anti-lock brake or stability control regulating"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D475"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CRUISE_CTRL_SET_SPD", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Cruise control set speed"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D476"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_VSS_LIMITER_SET_SPD", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed limiter set speed"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D477"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ENG_STOP_TIME", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "seconds" }, "name": "Engine stop time"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D478"}, "freq": 1,
+  "signals": [
+    {"id": "2008_STARTER_DUTY", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "seconds" }, "name": "Starter duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D47B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_TURBOCHARGER_TGT_POS", "path": "Battery", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Turbocharger, target position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D47D"}, "freq": 5,
+  "signals": [
+    {"id": "2008_OIL_T", "path": "Engine", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Oil temperature", "suggestedMetric": "engineOilTemperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D489"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AIR_FLOW", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "unknown" }, "name": "Air flow"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D48A"}, "freq": 1,
+  "signals": [
+    {"id": "2008_TURBOCHARGER_CTRL", "path": "Battery", "fmt": { "len": 16, "max": 127, "min": -128, "div": 256, "sign": true, "unit": "percent" }, "name": "Turbocharger control duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D48C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_TURBOCHARGER_FIRST", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Turbocharger first electronic boost"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D48E"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AIR_FLOW_TGT", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "unknown" }, "name": "Air flow target"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D491"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ACCEL_PEDAL_POS_1", "path": "Movement", "fmt": { "len": 16, "max": 399, "min": -399, "div": 81.92000625, "sign": true, "unit": "percent" }, "name": "Accelerator pedal position, track 1"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D492"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ACCEL_PEDAL_POS_2", "path": "Movement", "fmt": { "len": 16, "max": 399, "min": -399, "div": 81.92000625, "sign": true, "unit": "percent" }, "name": "Accelerator pedal position, track 2"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D496"}, "freq": 5,
+  "signals": [
+    {"id": "2008_SERVICE_BAT_T_6A8", "path": "Battery", "fmt": { "len": 16, "max": 16383, "min": -16384, "div": 2, "sign": true, "unit": "celsius" }, "name": "Service battery temperature"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D497"}, "freq": 1,
+  "signals": [
+    {"id": "2008_BAT_CURRENT", "path": "Battery", "fmt": { "len": 32, "max": 2097151, "min": -2097152, "div": 1024, "sign": true, "unit": "amps" }, "name": "Battery current"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D498"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_MAX_CLU_TRAVEL", "path": "Transmission", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "percent" }, "name": "Maximum clutch travel during gear shift"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D499"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CRANK_SPD_DETERMINED", "path": "Movement", "fmt": { "len": 16, "max": 16383, "min": -16384, "div": 2, "sign": true, "unit": "rpm" }, "name": "Crankshaft speed determined by camshaft sensor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D49C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ODO_6A8", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Total mileage", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4A0"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CONTROLLED_AIR_SUP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Controlled air supply module"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4A5"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ALTERNATOR_LOAD", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Alternator load value"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4AA"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_SET_SPD_ELEC_COOLING", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Set speed of electric cooling fan"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4AF"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AC", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Air conditioning"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4B0"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CRUISE_CTRL_RW_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Cruise control, RW status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4BA"}, "freq": 1,
+  "signals": [
+    {"id": "2008_POWERTRAIN_COND", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Powertrain condition"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4C0"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_VSS_LIMITER_STAT_LW", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Vehicle speed limiter status, LW"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4C3"}, "freq": 1,
+  "signals": [
+    {"id": "2008_STARTER_ENGAGEMENT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Starter engagement status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4CA"}, "freq": 1,
+  "signals": [
+    {"id": "2008_DATE", "path": "Engine", "fmt": { "len": 32, "max": 429496729, "div": 10, "unit": "seconds" }, "name": "Date"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4D2"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_INDICATED_ENG_TQ", "path": "Engine", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "newtonMeters" }, "name": "Indicated engine torque"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4D4"}, "freq": 5,
+  "signals": [
+    {"id": "2008_MIN_BAT_V_STARTUP", "path": "Battery", "fmt": { "len": 16, "max": 655, "min": -655, "div": 50.0000011176, "sign": true, "unit": "volts" }, "name": "Minimum battery voltage at startup"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4D8"}, "freq": 3600,
+  "signals": [
+    {"id": "2008_CNT_NUM_RE", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Computer restarts since memory erase"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4D9"}, "freq": 1,
+  "signals": [
+    {"id": "2008_TURBOCHARGER_P_MEAS", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Turbocharger pressure measured"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4E2"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ESTIMATED_TQ", "path": "Engine", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "newtonMeters" }, "name": "Estimated torque of internal friction of the engine"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4E3"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_TQ_CORRESPONDING", "path": "Engine", "fmt": { "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "newtonMeters" }, "name": "Torque corresponding to driver requirement"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4E4"}, "freq": 3600,
+  "signals": [
+    {"id": "2008_CNT_OCCURRENCE", "path": "Tires", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Counter of occurrence of enhanced resonance of the twin flywheel of the engine"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4E5"}, "freq": 3600,
+  "signals": [
+    {"id": "2008_CNT_OCCURRENCE_RESONANCE", "path": "Tires", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Counter of occurrence of resonance of the twin flywheel of the engine"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4EA"}, "freq": 1,
+  "signals": [
+    {"id": "2008_TURBOCHARGER_POS", "path": "Battery", "fmt": { "len": 16, "max": 655, "div": 100.0000022352, "unit": "percent" }, "name": "Turbocharger position information"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4EB"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MOVEMENT_CONTROLLED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Movement of controlled air supply module"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4EC"}, "freq": 1,
+  "signals": [
+    {"id": "2008_APPROXIMATE_POS", "path": "Battery", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "percent" }, "name": "Approximate position of turbocharger actuator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D4ED"}, "freq": 1,
+  "signals": [
+    {"id": "2008_LOW_P_FUEL_PMP_STAT", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Low pressure fuel pump status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D500"}, "freq": 1,
+  "signals": [
+    {"id": "2008_INJ_CODE_1", "path": "Engine", "fmt": {"bix": 8,   "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 1"},
+    {"id": "2008_INJ_CODE_2", "path": "Engine", "fmt": {"bix": 72,  "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 2"},
+    {"id": "2008_INJ_CODE_3", "path": "Engine", "fmt": {"bix": 136, "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 3"},
+    {"id": "2008_INJ_CODE_4", "path": "Engine", "fmt": {"bix": 200, "len": 40, "max": 1099511627775, "unit": "scalar" }, "name": "Injector code 4"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D509"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EGR_VLV_POS", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D50C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_PREHEATING_RELAY", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Preheating relay control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D510"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EGR_VLV_SET_POS", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve set position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D511"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EGR_VLV_CTRL_SIG_RCO", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Exhaust gas recirculation valve duty cycle"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D519"}, "freq": 30,
+  "signals": [
+    {"id": "2008_DIST_TRAVELED_SINCE", "path": "Trips", "fmt": { "len": 16, "blsb": true, "max": 4095, "div": 16, "unit": "kilometers" }, "name": "Distance traveled since the last regeneration"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D51F"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EVALUATION_DEGREE", "path": "Engine", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "percent" }, "name": "Evaluation of the degree of dilution of motor oil"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D523"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EVALUATION_CARBON", "path": "Engine", "fmt": { "len": 8, "max": 7.96, "div": 32, "unit": "percent" }, "name": "Evaluation of carbon content in engine oil"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D524"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ENG_OIL_DILUTION", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine oil dilution protection status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D525"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AVG_MILEAGE_LAST_10", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 4095, "div": 16, "unit": "kilometers" }, "name": "Average mileage for the last 10 regenerations"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D528"}, "freq": 1,
+  "signals": [
+    {"id": "2008_REGEN_ENABLE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Regeneration enable"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D52E"}, "freq": 5,
+  "signals": [
+    {"id": "2008_EXH_GAS_T_BEFORE_PRE", "path": "Transmission", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Exhaust gas temperature before upstream catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D534"}, "freq": 1,
+  "signals": [
+    {"id": "2008_VEH_MILEAGE_SINCE", "path": "Engine", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "kilometers" }, "name": "Vehicle mileage since the last oil change under severe vehicle operating conditions"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"22": "D536"}, "freq": 30,
+  "signals": [
+    {"id": "2008_DIST_NEXT_OIL_CHANGE", "path": "Trips", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Distance to next oil change"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53A"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EGR_VLV_FIRST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust gas recirculation valve first electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AIR_DOSER_FIRST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Air doser first electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D53D"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NOX_CONTENT_AFTER", "path": "Transmission", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "scalar" }, "name": "Nitrogen oxide content after catalytic converter, ppm"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D545"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NOX_CONTENT_MEAS", "path": "Transmission", "fmt": { "len": 16, "blsb": true, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "scalar" }, "name": "Nitrogen oxide content measured at the inlet of the catalytic converter, ppm"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D546"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CYL_1_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 1 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D547"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CYL_2_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 2 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D548"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CYL_3_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 3 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D549"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CYL_4_INJ_FLOW_CORR", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "Cylinder 4 injector flow correction"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SHORT_TERM_REGEN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Short-term regeneration capability"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54D"}, "freq": 1,
+  "signals": [
+    {"id": "2008_LONG_TERM_REGEN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Long-term regeneration capability"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54E"}, "freq": 5,
+  "signals": [
+    {"id": "2008_AIR_T_AIR_FLOW_METER", "path": "Engine", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Air temperature by air flow meter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D54F"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AIR_METERING_VLV_POS", "path": "Engine", "fmt": { "len": 16, "blsb": true, "max": 327, "min": -327, "div": 100.0000022352, "sign": true, "unit": "percent" }, "name": "Air metering valve position"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D552"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EGR_LOW_LIM", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust gas recirculation low limit electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D553"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EGR_HIGH_LIM", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Exhaust gas recirculation high limit electronic loading"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D555"}, "freq": 5,
+  "signals": [
+    {"id": "2008_EXH_GAS_T_AFTER_PRE", "path": "Transmission", "fmt": { "len": 16, "max": 3003, "min": -3549, "div": 10, "add": -273.1400146484, "sign": true, "unit": "celsius" }, "name": "Exhaust gas temperature after upstream catalytic converter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D556"}, "freq": 1,
+  "signals": [
+    {"id": "2008_TURBOCHARGER_P", "path": "Battery", "fmt": { "len": 16, "blsb": true, "max": 65535, "unit": "unknown" }, "name": "Turbocharger pressure reference"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D557"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CAN_VEH_BE_EQUIPPED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Towing device configured"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D559"}, "freq": 1,
+  "signals": [
+    {"id": "2008_PRE_CATALYTIC_CONV", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "percent" }, "name": "Upstream catalytic converter aging"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D563"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CALC_FUEL_INJ_AMOUNT", "path": "Fuel", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "unknown" }, "name": "Calculated fuel injection amount"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56A"}, "freq": 30,
+  "signals": [
+    {"id": "2008_MIN_FLI", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Minimum fuel level"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AMOUNT_FUEL_ADDITIVE", "path": "Fuel", "fmt": { "len": 16, "max": 6553, "div": 10, "unit": "unknown" }, "name": "Amount of fuel additive remaining in the additive tank"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56E"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_PROPORTIONAL_CLU", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Proportional clutch pedal sensor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D56F"}, "freq": 1,
+  "signals": [
+    {"id": "2008_FIRST_FUEL_ADDITIVE", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "First fuel additive injection state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D570"}, "freq": 1,
+  "signals": [
+    {"id": "2008_COMPOSITION_MIXTURE", "path": "Engine", "fmt": { "len": 16, "max": 1.99, "div": 32786.8858786303, "unit": "scalar" }, "name": "The composition of the mixture is calculated by the oxygen sensor"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D576"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NOX_CONTENT_MEAS_INLET_NOX", "path": "Transmission", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "scalar" }, "name": "Nitrogen oxide content measured at the inlet of the catalytic converter, ppm"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D586"}, "freq": 1,
+  "signals": [
+    {"id": "2008_REQ_CONTROLLED", "path": "Engine", "fmt": { "len": 16, "max": 399, "min": -399, "div": 81.92000625, "sign": true, "unit": "percent" }, "name": "Requested value controlled thermostat"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D588"}, "freq": 1,
+  "signals": [
+    {"id": "2008_INJ_ANG_HIGH_P_FUEL", "path": "Fuel", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "scalar" }, "name": "Injection angle of the high-pressure fuel pump"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D700"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_VACUUM_PRESENT_BRAKE", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Vacuum present in the brake system"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D703"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_STOP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic stop allowed by body control module"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D704"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_STOP_ALLOWED", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic stop allowed by gearbox computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D705"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_AUTOMATIC_STOP_ALLOWED_POWER_STEER", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic stop allowed by power steering computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D706"}, "freq": 1,
+  "signals": [
+    {"id": "2008_STOP_ALLOWED_ESP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Stop allowed by ESP computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D707"}, "freq": 1,
+  "signals": [
+    {"id": "2008_STOP_PERMITTED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Stop permitted by suspension computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D709"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_RESTART", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic restart request from engine management computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D70A"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_RESTART_REQ_BSI", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic restart request from body control module"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D70B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_RESTART_REQ", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic restart request from transmission computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D70C"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_RESTART_REQ_SENT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Restart request sent by power steering computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D70D"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ENG_RESTART_REQ_SENT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine restart request sent by ESP computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D70E"}, "freq": 1,
+  "signals": [
+    {"id": "2008_RESTART_REQ_SENT_SUSPENSION", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Restart request sent by suspension computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D712"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SET_V_REVERSIBLE_GEN", "path": "Battery", "fmt": { "len": 8, "max": 16.97, "div": 39.999999404, "add": 10.6000003815, "unit": "volts" }, "name": "Set voltage of the reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D713"}, "freq": 1,
+  "signals": [
+    {"id": "2008_REVERSIBLE_GEN_V", "path": "Battery", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "volts" }, "name": "Reversible generator voltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D714"}, "freq": 1,
+  "signals": [
+    {"id": "2008_GEN_MODE", "path": "Engine", "fmt": { "len": 8, "max": 19125, "mul": 75, "unit": "rpm" }, "name": "Generator mode"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D715"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_REVERSIBLE_GEN_TQ", "path": "Engine", "fmt": { "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "newtonMeters" }, "name": "Reversible generator torque"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D716"}, "freq": 1,
+  "signals": [
+    {"id": "2008_REVERSE_GEN_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Reverse generator status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D71B"}, "freq": 3600,
+  "signals": [
+    {"id": "2008_ENG_RESTART_CNT_STOP", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Engine restart counter by stop and start function"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D71E"}, "freq": 1,
+  "signals": [
+    {"id": "2008_START_OR_RESTART", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Start or restart inhibition transmitted by engine management computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D71F"}, "freq": 3600,
+  "signals": [
+    {"id": "2008_STARTER_ACTIVATION", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Starter activation counter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D720"}, "freq": 1,
+  "signals": [
+    {"id": "2008_V_TERMINALS_ENERGY", "path": "Battery", "fmt": { "len": 8, "max": 7.96, "div": 32, "unit": "volts" }, "name": "Voltage at the terminals of the energy accumulator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D721"}, "freq": 5,
+  "signals": [
+    {"id": "2008_T_ENERGY_ACCUMULATOR", "path": "Engine", "fmt": { "len": 16, "max": 16383, "min": -16384, "div": 2, "sign": true, "unit": "celsius" }, "name": "Temperature of the energy accumulator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D722"}, "freq": 1,
+  "signals": [
+    {"id": "2008_STAT_ENERGY", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Status of the energy accumulator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D723"}, "freq": 1,
+  "signals": [
+    {"id": "2008_DRIVER_PRESENCE", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Driver presence"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D724"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ECO_MODE_OFF_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Economy mode off state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D725"}, "freq": 1,
+  "signals": [
+    {"id": "2008_STOP_START_FUNCTION", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Stop and start function state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D726"}, "freq": 1,
+  "signals": [
+    {"id": "2008_STOP_START_SWITCH", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Stop and start switch"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D728"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_TQ_SUPPLIED_OR_TAKEN", "path": "Engine", "fmt": { "len": 16, "max": 2047, "min": -2048, "div": 16, "sign": true, "unit": "newtonMeters" }, "name": "Torque supplied or taken by generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D72A"}, "freq": 1,
+  "signals": [
+    {"id": "2008_STARTER_CTRL", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Starter control interface unit operating status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D72C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_V_MAINTAINER_STAT", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Voltage maintainer status"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D72D"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EVALUATION_TOT_RES_V", "path": "Battery", "fmt": { "len": 16, "max": 0.511, "div": 128040.9703220589, "unit": "scalar" }, "name": "Evaluation of the total resistance of the voltage maintaining device"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D730"}, "freq": 3600,
+  "signals": [
+    {"id": "2008_T_ELECTRONIC_POWER_V", "path": "Battery", "fmt": { "len": 16, "max": 16383, "min": -16384, "div": 2, "sign": true, "unit": "celsius" }, "name": "Temperature of the electronic power unit of the voltage maintenance device"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D731"}, "freq": 1,
+  "signals": [
+    {"id": "2008_PRESENCE_IDENTIFIER", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Presence of the identifier of the reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D732"}, "freq": 1,
+  "signals": [
+    {"id": "2008_IDENTIFIER", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Identifier of the electronic power circuit of the reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D733"}, "freq": 1,
+  "signals": [
+    {"id": "2008_IDENTIFIER_SUPPLIER", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Identifier of the supplier of the reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D734"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SET_V_ENERGY_STORAGE", "path": "Battery", "fmt": { "len": 8, "max": 7.96, "div": 32, "unit": "volts" }, "name": "Set voltage of energy storage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D73B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_VACUUM_CIRCUIT", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "unknown" }, "name": "Vacuum circuit vacuum"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D741"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SERVICE_BAT_WEAR", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Service battery wear condition"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D742"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SERVICE_BAT_CHG_ST", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Service battery charge state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D747"}, "freq": 1,
+  "signals": [
+    {"id": "2008_V_MAINTAINER", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Voltage maintainer computer restart permission"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D748"}, "freq": 1,
+  "signals": [
+    {"id": "2008_V_MAINTAINER_COMPUTER_REQ", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Voltage maintainer computer request sent"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D749"}, "freq": 1,
+  "signals": [
+    {"id": "2008_STOP_PERMITTED_V", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Stop permitted by voltage maintainer computer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D74B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SERVICE_NETWORK", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Service network related engine restart request"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D74C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_12V_NETWORK_ALLOWED", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "12V network allowed stop"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D74F"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ENERGY_ACCUMULATOR", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Energy accumulator discharge permission state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D753"}, "freq": 1,
+  "signals": [
+    {"id": "2008_DURING_GEN_LOAD", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Value during generator load smooth increase"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D755"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ENERGY_ACCUMULATOR_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Energy accumulator state transfer"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D758"}, "freq": 5,
+  "signals": [
+    {"id": "2008_ENERGY_ACCUMULATOR_T", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Energy accumulator temperature limiter state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D759"}, "freq": 3600,
+  "signals": [
+    {"id": "2008_CENTRALIZED_V_T", "path": "Battery", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Centralized voltage maintenance device temperature limiter state"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D75B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_GEN_SHUTDOWN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Generator shutdown"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D761"}, "freq": 1,
+  "signals": [
+    {"id": "2008_RETURN_STARTER_ENG", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Return to starter engine restart control"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D764"}, "freq": 1,
+  "signals": [
+    {"id": "2008_RETURN_ENG_START", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Return to engine start and restart control by starter"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D766"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SET_V_STORAGE_BAT", "path": "Battery", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "volts" }, "name": "Set voltage of storage battery charging"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D767"}, "freq": 1,
+  "signals": [
+    {"id": "2008_START_INHIBIT_CTRL", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Start inhibit control, wired"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D787"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EXPECTED_IDENTIFIER", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Expected identifier of reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D788"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EXPECTED_IDENTIFIER_ELECTRONIC", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Expected identifier of electronic power circuit of reversible generator generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D789"}, "freq": 1,
+  "signals": [
+    {"id": "2008_EXPECTED_GEN", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Expected generator supplier identifier of the reversible generator"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "D78A"}, "freq": 5,
+  "signals": [
+    {"id": "2008_SERVICE_BAT_V", "path": "Battery", "fmt": { "len": 16, "max": 511, "div": 128, "unit": "volts" }, "name": "Service battery voltage", "suggestedMetric": "starterBatteryVoltage"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "DADC"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ENG_CTRL_MODULE_STAT", "path": "Engine", "fmt": {           "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine control module status"},
+    {"id": "2008_IMMOBILIZER_CODE",     "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "scalar" }, "name": "Immobilizer code programming status"},
+    {"id": "2008_PROBLEMS_DETECTED",    "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 255, "unit": "scalar" }, "name": "Problems detected while transmitting unlock code"}
+  ]},
+{ "hdr": "6A8", "rax": "688", "fcm1": true, "dbg": true, "cmd": {"22": "DADD"}, "freq": 1,
+  "signals": [
+    {"id": "2008_LOCK_STAT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Lock status"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "din": "03", "dbg": true, "cmd": {"21": "C3"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ACCEL_PEDAL_POS_6A9", "path": "Movement", "fmt": {"bix": 88,  "len": 8, "max": 99.45,              "mul": 39, "div": 100,              "unit": "percent"      }, "name": "Accelerator pedal position"},
+    {"id": "2008_ENG_TQ",              "path": "Engine",   "fmt": {"bix": 112, "len": 8, "max": 410,   "min": -100, "mul": 2,              "add": -100, "unit": "newtonMeters" }, "name": "Engine torque"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "din": "03", "dbg": true, "cmd": {"21": "C5"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_RPM_6A9",        "path": "Movement", "fmt": {"bix": 40,  "len": 8, "max": 8160,              "mul": 32,                        "unit": "rpm"     }, "name": "Engine RPM",                     "suggestedMetric": "engineSpeed"},
+    {"id": "2008_INPUT_SHFT_SPD", "path": "Movement", "fmt": {"bix": 48,  "len": 8, "max": 8160,              "mul": 32,                        "unit": "rpm"     }, "name": "Input shaft speed"},
+    {"id": "2008_CMD_OIL_P",      "path": "Engine",   "fmt": {"bix": 128, "len": 8, "max": 25.5,                         "div": 10,             "unit": "bars"    }, "name": "Commanded oil pressure"},
+    {"id": "2008_ACT_OIL_P",      "path": "Engine",   "fmt": {"bix": 144, "len": 8, "max": 12.75,                        "div": 20,             "unit": "bars"    }, "name": "Actual oil pressure"},
+    {"id": "2008_ATF_T",          "path": "Engine",   "fmt": {"bix": 168, "len": 8, "max": 205,   "min": -50,                       "add": -50, "unit": "celsius" }, "name": "Transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "din": "03", "dbg": true, "cmd": {"21": "C8"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_VSS_6A9", "path": "Movement", "fmt": {"bix": 96, "len": 16, "max": 655, "div": 100, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D405"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_TRANS_OIL", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Automatic transmission oil aging sensor"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D406"}, "freq": 3600,
+  "signals": [
+    {"id": "2008_ENG_RESTART_CNT", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Engine restart counter"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D500"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_GEAR_SHIFT_LEVER_POS_ON", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear shift lever position displayed on instrument panel"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D501"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ENGAGED_GEAR_6A9", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engaged gear"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D502"}, "freq": 1,
+  "signals": [
+    {"id": "2008_WINTER_MODE_SWITCH", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Winter mode switch state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D503"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SPORT_MODE_CONTACTOR", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Sport mode contactor state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D504"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_TQ_CONV_STAT", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Torque converter status"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D505"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ACCEL_PEDAL_POS_6A9_6A9", "path": "Movement", "fmt": { "len": 8, "max": 127, "div": 2, "unit": "percent" }, "name": "Accelerator pedal position"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D506"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_MAX_ALLOWABLE_TQ", "path": "Engine", "fmt": { "len": 8, "max": 410, "min": -100, "mul": 2, "add": -100, "unit": "newtonMeters" }, "name": "Maximum allowable torque"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D507"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_DRIVER_REQ_TQ", "path": "Engine", "fmt": { "len": 8, "max": 410, "min": -100, "mul": 2, "add": -100, "unit": "newtonMeters" }, "name": "Driver, requested torque value"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D508"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_AUTOMATIC_TRANS_TQ", "path": "Transmission", "fmt": { "len": 8, "max": 410, "min": -100, "mul": 2, "add": -100, "unit": "newtonMeters" }, "name": "Automatic transmission torque request"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D509"}, "freq": 1,
+  "signals": [
+    {"id": "2008_DRAIN_TRANS", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic transmission oil drain"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D510"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_TRANS", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic transmission overheat indicator request"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D511"}, "freq": 1,
+  "signals": [
+    {"id": "2008_REQ_TURN_ON_ENG", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Request to turn on the engine diagnostic indicator"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D512"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ASR_OR_ESP_SYSTEM", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Traction or stability control regulating"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D513"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_MAIN_BRAKE_CONTACTOR", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Main brake contactor status"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D514"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_SECONDARY_BRAKE", "path": "Control", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Secondary brake contactor status"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D515"}, "freq": 1,
+  "signals": [
+    {"id": "2008_COMPUTER_WAKE_UP_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Computer remote wake-up state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D516"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CHANGE_REPORT", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "CHANGE REPORT IN PROGRESS"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D517"}, "freq": 1,
+  "signals": [
+    {"id": "2008_BUTTON_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Button state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D51B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_START_PROHIBITION", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Start prohibition"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D520"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_GEAR_SHIFT_KNOB", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Gear shift knob under steering wheel"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D530"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_AVG_FRONT_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 2621, "div": 25.0000005588, "unit": "rpm" }, "name": "Average front wheel speed"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D531"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_RL_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 655, "div": 100.0000022352, "unit": "kilometersPerHour" }, "name": "Rear left wheel speed"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D532"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_RR_WHL_SPD", "path": "Tires", "fmt": { "len": 16, "max": 655, "div": 100.0000022352, "unit": "kilometersPerHour" }, "name": "Rear right wheel speed"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D533"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_AVG_SPD_FRONT_WHEELS", "path": "Tires", "fmt": { "len": 16, "max": 655, "div": 100.0000022352, "unit": "kilometersPerHour" }, "name": "Average speed front wheels"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D550"}, "freq": 5,
+  "signals": [
+    {"id": "2008_AUTOMATIC_ATF_T", "path": "Transmission", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Automatic transmission fluid temperature", "suggestedMetric": "transmissionFluidTemperature"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D551"}, "freq": 5,
+  "signals": [
+    {"id": "2008_COMPUTER_POWER_SUP_V", "path": "Battery", "fmt": { "len": 8, "max": 25.5, "div": 10, "unit": "volts" }, "name": "Computer power supply voltage"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D552"}, "freq": 5,
+  "signals": [
+    {"id": "2008_AAT_6A9", "path": "Engine", "fmt": { "len": 8, "max": 87.5, "min": -40, "div": 2, "add": -40, "unit": "celsius" }, "name": "Ambient air temperature"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D553"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ENG_OP_MODE", "path": "Engine", "fmt": { "len": 16, "max": 8191, "div": 8, "unit": "rpm" }, "name": "Engine operating mode"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D554"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_REAL_ENG_TQ", "path": "Engine", "fmt": { "len": 8, "max": 410, "min": -100, "mul": 2, "add": -100, "unit": "newtonMeters" }, "name": "Real engine torque"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D555"}, "freq": 5,
+  "signals": [
+    {"id": "2008_ECT_6A9", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Engine coolant temperature"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D604"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_TQ_CONV_LOCK_UP_P", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Torque converter lock-up pressure variation solenoid valve control current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D605"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_TQ_CONV_LOCK_UP_P_VARIATION", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Torque converter lock-up pressure variation solenoid valve control current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D606"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SLT_LINE_P_VARIATION", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Line pressure solenoid valve control current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D607"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MEAS_LINE_P", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured line pressure variation solenoid valve current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D608"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CTRL_CURRENT_P_B1", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the electromagnetic valve for changing the pressure in the brake system B1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D609"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT_P_B1", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the electromagnetic valve for changing the pressure in the brake system B1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60A"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CTRL_CURRENT", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the electromagnetic valve for changing the gear shift SC2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60B"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the electromagnetic valve for changing the gear shift SC2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SHIFT_SOLENOID_CTRL", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Shift solenoid control current SC3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60D"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SHIFT_SOLENOID_MEAS", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Shift solenoid measured current SC3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60E"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SHIFT_SOLENOID_CTRL_CURRENT_SC4", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Shift solenoid control current SC4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D60F"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SHIFT_SOLENOID_MEAS_CURRENT_SC4", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Shift solenoid measured current SC4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D610"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CTRL_CURRENT_P_C1", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the solenoid valve for changing the pressure of the clutch C1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D611"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT_P_C1", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the solenoid valve for changing the pressure of the clutch C1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D612"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CTRL_CURRENT_P_C2", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the solenoid valve for changing the pressure of the clutch C2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D613"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT_P_C2", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the solenoid valve for changing the pressure of the clutch C2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D614"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CTRL_CURRENT_P_C3", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the electromagnetic valve of change of pressure of clutch C3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D615"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT_P_C3", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the electromagnetic valve of change of pressure of clutch C3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D616"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ACTIVATION", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Activation of additional oil pump, ATN8 gearbox"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D617"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ADDITIONAL_OIL_PMP", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Additional oil pump control status, atn8 transmission"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D618"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SC5_SHIFT_SOLENOID", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "SC5 shift solenoid control current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D619"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SC5_SHIFT_SOLENOID_MEAS", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "SC5 shift solenoid measured current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61A"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_TRANS_LUBRICATION", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic transmission lubrication solenoid control current"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT_CTRL", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Measured current of control of electromagnetic valve of automatic transmission lubrication"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61C"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CTRL_CURRENT_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Control current of electromagnetic valve of change of pressure of torque converter lock-up"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61D"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT_CTRL_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Measured current of control of electromagnetic valve of change of pressure of torque converter lock-up"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61E"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CTRL_CURRENT_ELECTROMAGNETIC_VLV_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Control current of electromagnetic valve of actuator of automatic transmission lock-up in position p"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D61F"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Measured current of the solenoid valve for controlling the locking finger of the automatic transmission in position p"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D620"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CTRL_CURRENT_P_C4", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of the electromagnetic valve of change of pressure of clutch C4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D621"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT_P_C4", "path": "Transmission", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of the electromagnetic valve of change of pressure of clutch C4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D622"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CTRL_CURRENT_P_B2", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Control current of electromagnetic valve for changing the pressure in the brake system B2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D623"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT_P_B2", "path": "Engine", "fmt": { "len": 8, "max": 2550, "mul": 10, "unit": "milliamps" }, "name": "Measured current of electromagnetic valve for changing the pressure in the brake system B2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D625"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CTRL_CURRENT_P_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Control current of electromagnetic valve for regulating the pressure in the control system of the oil pressure accumulator, AMN8 gearbox"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D626"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MEAS_CURRENT_P_P", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Measured current of the electromagnetic valve for regulating the pressure in the oil pressure accumulator control system, AMN8 gearbox"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D650"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_TRANS_INPUT_SHFT", "path": "Transmission", "fmt": { "len": 16, "max": 131070, "mul": 2, "unit": "rpm" }, "name": "Automatic transmission input shaft mode, measured"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D651"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_TRANS_INPUT_SHFT_MODE", "path": "Transmission", "fmt": { "len": 16, "max": 131070, "mul": 2, "unit": "rpm" }, "name": "Automatic transmission input shaft mode, calculated"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D652"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_TRANS_OUTPUT", "path": "Transmission", "fmt": { "len": 16, "max": 65535, "unit": "rpm" }, "name": "Automatic transmission output shaft mode, measured"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D653"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_TRANS_OUTPUT_SHFT_MODE", "path": "Transmission", "fmt": { "len": 16, "max": 4186112, "min": -8128, "mul": 64, "add": -8128, "unit": "rpm" }, "name": "Automatic transmission output shaft mode, calculated"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D654"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_TQ_CONV_SLIP_SPD", "path": "Movement", "fmt": { "len": 8, "max": 8192, "min": -8128, "mul": 64, "add": -8128, "unit": "rpm" }, "name": "Torque converter slip speed, measured"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D655"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_TQ_CONV_SLIP_MODE", "path": "Transmission", "fmt": { "len": 8, "max": 8192, "min": -8128, "mul": 64, "add": -8128, "unit": "rpm" }, "name": "Torque converter slip mode, theoretical value"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D670"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_TRANS_EMERGENCY", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic transmission in emergency mode"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D671"}, "freq": 1,
+  "signals": [
+    {"id": "2008_FUGITIVE_TRIP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "FUGITIVE TRIP IN EMERGENCY MODE"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D672"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_CLU_RELEASE_ST_STOP", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Clutch release state at stop, creep speed reduction"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D673"}, "freq": 1,
+  "signals": [
+    {"id": "2008_OP_MODE_USED", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Operating mode used by the automatic transmission"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D700"}, "freq": 1,
+  "signals": [
+    {"id": "2008_POS_GEARSHIFT_LEVER", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Position of the gearshift lever"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D701"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SHIFT_LOCK_CTRL", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Shift-lock control"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D703"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ENG_START", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine start prohibition control, start lock"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D704"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_STAT_COMMANDS", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "STATUS COMMANDS REGULATION OR LIMITATION SPEED"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D705"}, "freq": 1,
+  "signals": [
+    {"id": "2008_REMOTE_WAKE_UP", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Remote wake-up circuit status"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D708"}, "freq": 1,
+  "signals": [
+    {"id": "2008_REMOTE_WAKE_UP_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Remote wake-up state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D709"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ICE_ST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Combustion engine state"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D70B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AUTOMATIC_TRANS_PARK", "path": "Transmission", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Automatic transmission in park position"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D70E"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_BRAKE_CIRCUIT_P", "path": "Control", "fmt": { "len": 16, "max": 6498, "min": -55, "div": 10, "add": -55, "unit": "bars" }, "name": "Brake circuit pressure"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D711"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_VSS_6A9_6A9", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D730"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ENG_STALLS",   "path": "Engine", "fmt": {          "len": 8, "max": 255, "unit": "scalar" }, "name": "Engine stalls"},
+    {"id": "2008_NUM_ENG_STOP", "path": "Engine", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of engine stop information deletion cycles"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D731"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_ACTIVATIONS_CLU_C1", "path": "Transmission", "fmt": {          "len": 8, "max": 255, "unit": "scalar" }, "name": "Activation count, clutch protection C1"},
+    {"id": "2008_NUM_ACTIVATIONS_CLU_C2", "path": "Transmission", "fmt": {"bix": 8, "len": 8, "max": 255, "unit": "scalar" }, "name": "Activation count, clutch protection C2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D742"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_ACTIVATIONS_C1", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, the electromagnetic valve of the clutch C1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D743"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_ACTIVATIONS_CLU_ELECTROMAGNETIC_VLV_C2", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, clutch electromagnetic valve C2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D744"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_ACTIVATIONS_CLU_C3", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, clutch electromagnetic valve C3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D745"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_ACTIVATIONS_B1", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, brake electromagnetic valve B1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D746"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_ACTIVATIONS_TQ", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, torque converter lockup electromagnetic valve"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D747"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_GEAR_ENGAGEMENTS_1", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 1"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D748"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_GEAR_ENGAGEMENTS_2", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D749"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_GEAR_ENGAGEMENTS_3", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D74A"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_GEAR_ENGAGEMENTS_4", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D74B"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_GEAR_ENGAGEMENTS_5", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 5"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D74C"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_GEAR_ENGAGEMENTS_6", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 6"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D74D"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_GEAR_ENGAGEMENTS", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements right"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D74E"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_GEAR_ENGAGEMENTS_N", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements n"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D750"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_ADDITIONAL_OIL", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, additional oil pump, ATN8 gearbox"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D751"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_LINE_P_CTRL", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, line pressure control solenoid"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D752"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_SHIFT_SOLENOID", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, shift solenoid SC2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D753"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_SHIFT_SOLENOID_ACTIVATIONS_SC3", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, shift solenoid SC3"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D754"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_SHIFT_SOLENOID_OPERATED_SC4", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of shift solenoid operated SC4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D755"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_SHIFT_SOLENOID_OPERATED_SC5", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of shift solenoid operated SC5"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D756"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_SHIFT_SOLENOID_OPERATED", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of shift solenoid operated automatic transmission lubrication control valve"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D757"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_SHIFT_SOLENOID_P", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of shift solenoid operated torque converter lock-up pressure regulating valve"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D758"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_ACTIVATIONS_P", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, the electromagnetic valve for controlling the automatic transmission locking finger in position p"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D759"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_ACTIVATIONS_C4", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, the electromagnetic valve of clutch C4"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D75A"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_ACTIVATIONS_B2", "path": "Engine", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, the electromagnetic valve of brake B2"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D75B"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_ACTIVATIONS_GEAR_7", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Activation count, gear 7"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D75C"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_NUM_GEAR_ENGAGEMENTS_8", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of gear engagements 8"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D75D"}, "freq": 1,
+  "signals": [
+    {"id": "2008_NUM_ENGAGEMENTS_P_P", "path": "Transmission", "fmt": { "len": 32, "max": 4294967295, "unit": "scalar" }, "name": "Number of engagements of the electromagnetic valve for regulating the pressure in the oil pressure accumulator control system, AMN8 gearbox"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D801"}, "freq": 1,
+  "signals": [
+    {"id": "2008_VEH_HOUR_METER", "path": "Engine", "fmt": { "len": 32, "max": 429496729, "div": 10, "unit": "seconds" }, "name": "Vehicle hour meter"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "D802"}, "freq": 30,
+  "signals": [
+    {"id": "2008_ODO_6A9", "path": "Trips", "fmt": { "len": 24, "max": 16777215, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "DADC"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ST_LOCK_UNLOCK_CTRL",     "path": "Engine", "fmt": {           "len": 8, "max": 255, "unit": "scalar" }, "name": "State lock/unlock control unit"},
+    {"id": "2008_ANTI_START",              "path": "Engine", "fmt": {"bix": 8,  "len": 8, "max": 255, "unit": "scalar" }, "name": "ANTI START PROGRAMMING STATUS"},
+    {"id": "2008_PROBLEMS_DETECTED_WHILE", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 255, "unit": "scalar" }, "name": "Problems detected while transmitting unlock code"}
+  ]},
+{ "hdr": "6A9", "rax": "689", "fcm1": true, "dbg": true, "cmd": {"22": "DADD"}, "freq": 1,
+  "signals": [
+    {"id": "2008_COMPUTER_LOCK", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Computer lock"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D407"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_ACCEL_PEDAL_POS_6B4", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "percent" }, "name": "Accelerator pedal position"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "cmd": {"22": "D410"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2023 },
+  "signals": [
+    {"id": "2008_HVBAT_SOC", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 512, "unit": "percent" }, "name": "High voltage battery charge, calibrated", "suggestedMetric": "stateOfCharge"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D413"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MIN_CELL_CAP", "path": "Engine", "fmt": { "len": 8, "max": 127, "div": 2, "unit": "percent" }, "name": "Minimum cell capacity"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D438"}, "freq": 1,
+  "signals": [
+    {"id": "2008_CELL_V_SUMM", "path": "Battery", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "volts" }, "name": "Cell voltage sum"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D43B"}, "freq": 1,
+  "signals": [
+    {"id": "2008_HIGHEST_V_CELL", "path": "Battery", "fmt": { "len": 8, "max": 256, "add": 1, "unit": "scalar" }, "name": "Highest voltage cell number"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D43C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_LOWEST_V_CELL_NUMBER", "path": "Battery", "fmt": { "len": 8, "max": 256, "add": 1, "unit": "scalar" }, "name": "Lowest voltage cell number"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D43D"}, "freq": 1,
+  "signals": [
+    {"id": "2008_AVG_CELL_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Average cell voltage value"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D440"}, "freq": 1,
+  "signals": [
+    {"id": "2008_BAT_CELL_001_V", "path": "Battery", "fmt": {             "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 001 voltage"},
+    {"id": "2008_BAT_CELL_002_V", "path": "Battery", "fmt": {"bix": 16,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 002 voltage"},
+    {"id": "2008_BAT_CELL_003_V", "path": "Battery", "fmt": {"bix": 32,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 003 voltage"},
+    {"id": "2008_BAT_CELL_004_V", "path": "Battery", "fmt": {"bix": 48,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 004 voltage"},
+    {"id": "2008_BAT_CELL_005_V", "path": "Battery", "fmt": {"bix": 64,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 005 voltage"},
+    {"id": "2008_BAT_CELL_006_V", "path": "Battery", "fmt": {"bix": 80,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 006 voltage"},
+    {"id": "2008_BAT_CELL_007_V", "path": "Battery", "fmt": {"bix": 96,   "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 007 voltage"},
+    {"id": "2008_BAT_CELL_008_V", "path": "Battery", "fmt": {"bix": 112,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 008 voltage"},
+    {"id": "2008_BAT_CELL_009_V", "path": "Battery", "fmt": {"bix": 128,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 009 voltage"},
+    {"id": "2008_BAT_CELL_010_V", "path": "Battery", "fmt": {"bix": 144,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 010 voltage"},
+    {"id": "2008_BAT_CELL_011_V", "path": "Battery", "fmt": {"bix": 160,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 011 voltage"},
+    {"id": "2008_BAT_CELL_012_V", "path": "Battery", "fmt": {"bix": 176,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 012 voltage"},
+    {"id": "2008_BAT_CELL_013_V", "path": "Battery", "fmt": {"bix": 192,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 013 voltage"},
+    {"id": "2008_BAT_CELL_014_V", "path": "Battery", "fmt": {"bix": 208,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 014 voltage"},
+    {"id": "2008_BAT_CELL_015_V", "path": "Battery", "fmt": {"bix": 224,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 015 voltage"},
+    {"id": "2008_BAT_CELL_016_V", "path": "Battery", "fmt": {"bix": 240,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 016 voltage"},
+    {"id": "2008_BAT_CELL_017_V", "path": "Battery", "fmt": {"bix": 256,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 017 voltage"},
+    {"id": "2008_BAT_CELL_018_V", "path": "Battery", "fmt": {"bix": 272,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 018 voltage"},
+    {"id": "2008_BAT_CELL_019_V", "path": "Battery", "fmt": {"bix": 288,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 019 voltage"},
+    {"id": "2008_BAT_CELL_020_V", "path": "Battery", "fmt": {"bix": 304,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 020 voltage"},
+    {"id": "2008_BAT_CELL_021_V", "path": "Battery", "fmt": {"bix": 320,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 021 voltage"},
+    {"id": "2008_BAT_CELL_022_V", "path": "Battery", "fmt": {"bix": 336,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 022 voltage"},
+    {"id": "2008_BAT_CELL_023_V", "path": "Battery", "fmt": {"bix": 352,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 023 voltage"},
+    {"id": "2008_BAT_CELL_024_V", "path": "Battery", "fmt": {"bix": 368,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 024 voltage"},
+    {"id": "2008_BAT_CELL_025_V", "path": "Battery", "fmt": {"bix": 384,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 025 voltage"},
+    {"id": "2008_BAT_CELL_026_V", "path": "Battery", "fmt": {"bix": 400,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 026 voltage"},
+    {"id": "2008_BAT_CELL_027_V", "path": "Battery", "fmt": {"bix": 416,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 027 voltage"},
+    {"id": "2008_BAT_CELL_028_V", "path": "Battery", "fmt": {"bix": 432,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 028 voltage"},
+    {"id": "2008_BAT_CELL_029_V", "path": "Battery", "fmt": {"bix": 448,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 029 voltage"},
+    {"id": "2008_BAT_CELL_030_V", "path": "Battery", "fmt": {"bix": 464,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 030 voltage"},
+    {"id": "2008_BAT_CELL_031_V", "path": "Battery", "fmt": {"bix": 480,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 031 voltage"},
+    {"id": "2008_BAT_CELL_032_V", "path": "Battery", "fmt": {"bix": 496,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 032 voltage"},
+    {"id": "2008_BAT_CELL_033_V", "path": "Battery", "fmt": {"bix": 512,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 033 voltage"},
+    {"id": "2008_BAT_CELL_034_V", "path": "Battery", "fmt": {"bix": 528,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 034 voltage"},
+    {"id": "2008_BAT_CELL_035_V", "path": "Battery", "fmt": {"bix": 544,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 035 voltage"},
+    {"id": "2008_BAT_CELL_036_V", "path": "Battery", "fmt": {"bix": 560,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 036 voltage"},
+    {"id": "2008_BAT_CELL_037_V", "path": "Battery", "fmt": {"bix": 576,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 037 voltage"},
+    {"id": "2008_BAT_CELL_038_V", "path": "Battery", "fmt": {"bix": 592,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 038 voltage"},
+    {"id": "2008_BAT_CELL_039_V", "path": "Battery", "fmt": {"bix": 608,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 039 voltage"},
+    {"id": "2008_BAT_CELL_040_V", "path": "Battery", "fmt": {"bix": 624,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 040 voltage"},
+    {"id": "2008_BAT_CELL_041_V", "path": "Battery", "fmt": {"bix": 640,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 041 voltage"},
+    {"id": "2008_BAT_CELL_042_V", "path": "Battery", "fmt": {"bix": 656,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 042 voltage"},
+    {"id": "2008_BAT_CELL_043_V", "path": "Battery", "fmt": {"bix": 672,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 043 voltage"},
+    {"id": "2008_BAT_CELL_044_V", "path": "Battery", "fmt": {"bix": 688,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 044 voltage"},
+    {"id": "2008_BAT_CELL_045_V", "path": "Battery", "fmt": {"bix": 704,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 045 voltage"},
+    {"id": "2008_BAT_CELL_046_V", "path": "Battery", "fmt": {"bix": 720,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 046 voltage"},
+    {"id": "2008_BAT_CELL_047_V", "path": "Battery", "fmt": {"bix": 736,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 047 voltage"},
+    {"id": "2008_BAT_CELL_048_V", "path": "Battery", "fmt": {"bix": 752,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 048 voltage"},
+    {"id": "2008_BAT_CELL_049_V", "path": "Battery", "fmt": {"bix": 768,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 049 voltage"},
+    {"id": "2008_BAT_CELL_050_V", "path": "Battery", "fmt": {"bix": 784,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 050 voltage"},
+    {"id": "2008_BAT_CELL_051_V", "path": "Battery", "fmt": {"bix": 800,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 051 voltage"},
+    {"id": "2008_BAT_CELL_052_V", "path": "Battery", "fmt": {"bix": 816,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 052 voltage"},
+    {"id": "2008_BAT_CELL_053_V", "path": "Battery", "fmt": {"bix": 832,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 053 voltage"},
+    {"id": "2008_BAT_CELL_054_V", "path": "Battery", "fmt": {"bix": 848,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 054 voltage"},
+    {"id": "2008_BAT_CELL_055_V", "path": "Battery", "fmt": {"bix": 864,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 055 voltage"},
+    {"id": "2008_BAT_CELL_056_V", "path": "Battery", "fmt": {"bix": 880,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 056 voltage"},
+    {"id": "2008_BAT_CELL_057_V", "path": "Battery", "fmt": {"bix": 896,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 057 voltage"},
+    {"id": "2008_BAT_CELL_058_V", "path": "Battery", "fmt": {"bix": 912,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 058 voltage"},
+    {"id": "2008_BAT_CELL_059_V", "path": "Battery", "fmt": {"bix": 928,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 059 voltage"},
+    {"id": "2008_BAT_CELL_060_V", "path": "Battery", "fmt": {"bix": 944,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 060 voltage"},
+    {"id": "2008_BAT_CELL_061_V", "path": "Battery", "fmt": {"bix": 960,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 061 voltage"},
+    {"id": "2008_BAT_CELL_062_V", "path": "Battery", "fmt": {"bix": 976,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 062 voltage"},
+    {"id": "2008_BAT_CELL_063_V", "path": "Battery", "fmt": {"bix": 992,  "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 063 voltage"},
+    {"id": "2008_BAT_CELL_064_V", "path": "Battery", "fmt": {"bix": 1008, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 064 voltage"},
+    {"id": "2008_BAT_CELL_065_V", "path": "Battery", "fmt": {"bix": 1024, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 065 voltage"},
+    {"id": "2008_BAT_CELL_066_V", "path": "Battery", "fmt": {"bix": 1040, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 066 voltage"},
+    {"id": "2008_BAT_CELL_067_V", "path": "Battery", "fmt": {"bix": 1056, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 067 voltage"},
+    {"id": "2008_BAT_CELL_068_V", "path": "Battery", "fmt": {"bix": 1072, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 068 voltage"},
+    {"id": "2008_BAT_CELL_069_V", "path": "Battery", "fmt": {"bix": 1088, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 069 voltage"},
+    {"id": "2008_BAT_CELL_070_V", "path": "Battery", "fmt": {"bix": 1104, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 070 voltage"},
+    {"id": "2008_BAT_CELL_071_V", "path": "Battery", "fmt": {"bix": 1120, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 071 voltage"},
+    {"id": "2008_BAT_CELL_072_V", "path": "Battery", "fmt": {"bix": 1136, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 072 voltage"},
+    {"id": "2008_BAT_CELL_073_V", "path": "Battery", "fmt": {"bix": 1152, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 073 voltage"},
+    {"id": "2008_BAT_CELL_074_V", "path": "Battery", "fmt": {"bix": 1168, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 074 voltage"},
+    {"id": "2008_BAT_CELL_075_V", "path": "Battery", "fmt": {"bix": 1184, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 075 voltage"},
+    {"id": "2008_BAT_CELL_076_V", "path": "Battery", "fmt": {"bix": 1200, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 076 voltage"},
+    {"id": "2008_BAT_CELL_077_V", "path": "Battery", "fmt": {"bix": 1216, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 077 voltage"},
+    {"id": "2008_BAT_CELL_078_V", "path": "Battery", "fmt": {"bix": 1232, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 078 voltage"},
+    {"id": "2008_BAT_CELL_079_V", "path": "Battery", "fmt": {"bix": 1248, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 079 voltage"},
+    {"id": "2008_BAT_CELL_080_V", "path": "Battery", "fmt": {"bix": 1264, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 080 voltage"},
+    {"id": "2008_BAT_CELL_081_V", "path": "Battery", "fmt": {"bix": 1280, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 081 voltage"},
+    {"id": "2008_BAT_CELL_082_V", "path": "Battery", "fmt": {"bix": 1296, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 082 voltage"},
+    {"id": "2008_BAT_CELL_083_V", "path": "Battery", "fmt": {"bix": 1312, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 083 voltage"},
+    {"id": "2008_BAT_CELL_084_V", "path": "Battery", "fmt": {"bix": 1328, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 084 voltage"},
+    {"id": "2008_BAT_CELL_085_V", "path": "Battery", "fmt": {"bix": 1344, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 085 voltage"},
+    {"id": "2008_BAT_CELL_086_V", "path": "Battery", "fmt": {"bix": 1360, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 086 voltage"},
+    {"id": "2008_BAT_CELL_087_V", "path": "Battery", "fmt": {"bix": 1376, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 087 voltage"},
+    {"id": "2008_BAT_CELL_088_V", "path": "Battery", "fmt": {"bix": 1392, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 088 voltage"},
+    {"id": "2008_BAT_CELL_089_V", "path": "Battery", "fmt": {"bix": 1408, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 089 voltage"},
+    {"id": "2008_BAT_CELL_090_V", "path": "Battery", "fmt": {"bix": 1424, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 090 voltage"},
+    {"id": "2008_BAT_CELL_091_V", "path": "Battery", "fmt": {"bix": 1440, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 091 voltage"},
+    {"id": "2008_BAT_CELL_092_V", "path": "Battery", "fmt": {"bix": 1456, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 092 voltage"},
+    {"id": "2008_BAT_CELL_093_V", "path": "Battery", "fmt": {"bix": 1472, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 093 voltage"},
+    {"id": "2008_BAT_CELL_094_V", "path": "Battery", "fmt": {"bix": 1488, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 094 voltage"},
+    {"id": "2008_BAT_CELL_095_V", "path": "Battery", "fmt": {"bix": 1504, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 095 voltage"},
+    {"id": "2008_BAT_CELL_096_V", "path": "Battery", "fmt": {"bix": 1520, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 096 voltage"},
+    {"id": "2008_BAT_CELL_097_V", "path": "Battery", "fmt": {"bix": 1536, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 097 voltage"},
+    {"id": "2008_BAT_CELL_098_V", "path": "Battery", "fmt": {"bix": 1552, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 098 voltage"},
+    {"id": "2008_BAT_CELL_099_V", "path": "Battery", "fmt": {"bix": 1568, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 099 voltage"},
+    {"id": "2008_BAT_CELL_100_V", "path": "Battery", "fmt": {"bix": 1584, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 100 voltage"},
+    {"id": "2008_BAT_CELL_101_V", "path": "Battery", "fmt": {"bix": 1600, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 101 voltage"},
+    {"id": "2008_BAT_CELL_102_V", "path": "Battery", "fmt": {"bix": 1616, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 102 voltage"},
+    {"id": "2008_BAT_CELL_103_V", "path": "Battery", "fmt": {"bix": 1632, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 103 voltage"},
+    {"id": "2008_BAT_CELL_104_V", "path": "Battery", "fmt": {"bix": 1648, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 104 voltage"},
+    {"id": "2008_BAT_CELL_105_V", "path": "Battery", "fmt": {"bix": 1664, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 105 voltage"},
+    {"id": "2008_BAT_CELL_106_V", "path": "Battery", "fmt": {"bix": 1680, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 106 voltage"},
+    {"id": "2008_BAT_CELL_107_V", "path": "Battery", "fmt": {"bix": 1696, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 107 voltage"},
+    {"id": "2008_BAT_CELL_108_V", "path": "Battery", "fmt": {"bix": 1712, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 108 voltage"},
+    {"id": "2008_BAT_CELL_109_V", "path": "Battery", "fmt": {"bix": 1728, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 109 voltage"},
+    {"id": "2008_BAT_CELL_110_V", "path": "Battery", "fmt": {"bix": 1744, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 110 voltage"},
+    {"id": "2008_BAT_CELL_111_V", "path": "Battery", "fmt": {"bix": 1760, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 111 voltage"},
+    {"id": "2008_BAT_CELL_112_V", "path": "Battery", "fmt": {"bix": 1776, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 112 voltage"},
+    {"id": "2008_BAT_CELL_113_V", "path": "Battery", "fmt": {"bix": 1792, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 113 voltage"},
+    {"id": "2008_BAT_CELL_114_V", "path": "Battery", "fmt": {"bix": 1808, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 114 voltage"},
+    {"id": "2008_BAT_CELL_115_V", "path": "Battery", "fmt": {"bix": 1824, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 115 voltage"},
+    {"id": "2008_BAT_CELL_116_V", "path": "Battery", "fmt": {"bix": 1840, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 116 voltage"},
+    {"id": "2008_BAT_CELL_117_V", "path": "Battery", "fmt": {"bix": 1856, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 117 voltage"},
+    {"id": "2008_BAT_CELL_118_V", "path": "Battery", "fmt": {"bix": 1872, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 118 voltage"},
+    {"id": "2008_BAT_CELL_119_V", "path": "Battery", "fmt": {"bix": 1888, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 119 voltage"},
+    {"id": "2008_BAT_CELL_120_V", "path": "Battery", "fmt": {"bix": 1904, "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Battery cell 120 voltage"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D445"}, "freq": 5,
+  "signals": [
+    {"id": "2008_BAT_MAX_UNIT_T_NUMBER", "path": "Battery", "fmt": { "len": 8, "max": 256, "add": 1, "unit": "scalar" }, "name": "Battery max unit temperature number"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D446"}, "freq": 5,
+  "signals": [
+    {"id": "2008_BAT_MIN_UNIT_T_NUMBER", "path": "Battery", "fmt": { "len": 8, "max": 256, "add": 1, "unit": "scalar" }, "name": "Battery min unit temperature number"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D47A"}, "freq": 1,
+  "signals": [
+    {"id": "2008_BAT_INSULATION_RES", "path": "Battery", "fmt": { "len": 32, "max": 4294967295, "unit": "kiloohms" }, "name": "Battery insulation resistance"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D49C"}, "freq": 1,
+  "signals": [
+    {"id": "2008_ODO", "path": "Trips", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D802"}, "freq": 0.25,
+  "signals": [
+    {"id": "2008_VSS_6B4", "path": "Movement", "fmt": { "len": 32, "max": 4194368, "mul": 64, "div": 65535, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D810"}, "freq": 1,
+  "signals": [
+    {"id": "2008_HVBAT_SOC_RAW", "path": "Battery", "fmt": { "len": 16, "max": 100, "div": 512, "unit": "percent" }, "name": "High voltage battery charge", "suggestedMetric": "stateOfCharge"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D815"}, "freq": 1,
+  "signals": [
+    {"id": "2008_HVBAT_VOLT", "path": "Battery", "fmt": { "len": 16, "max": 4095, "div": 16, "unit": "volts" }, "name": "High voltage battery voltage"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D816"}, "freq": 1,
+  "signals": [
+    {"id": "2008_BAT_DC_CURRENT", "path": "Battery", "fmt": { "len": 32, "max": 67107663, "min": -1200, "div": 64, "add": -1200, "unit": "amps" }, "name": "Battery DC current"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D817"}, "freq": 5,
+  "signals": [
+    {"id": "2008_BAT_MAX_UNIT_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery max unit temperature"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D822"}, "freq": 1,
+  "signals": [
+    {"id": "2008_SERVICE_CELL_V", "path": "Battery", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "volts" }, "name": "Service cell voltage value"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D860"}, "freq": 3600,
+  "signals": [
+    {"id": "2008_HVBAT_SOH", "path": "Battery", "fmt": {"bix": 8, "len": 16, "max": 100, "div": 16, "unit": "percent" }, "name": "High voltage battery health", "suggestedMetric": "stateOfHealth"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D865"}, "freq": 1,
+  "signals": [
+    {"id": "2008_HVBAT_KWH", "path": "Battery", "fmt": { "len": 16, "max": 1023, "div": 64, "unit": "kilowattHours" }, "name": "HV battery energy", "description": "Energy stored in the high voltage battery"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D86F"}, "freq": 1,
+  "signals": [
+    {"id": "2008_HVBAT_MIN_VOLT", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "millivolts" }, "name": "High voltage minimum voltage"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D870"}, "freq": 1,
+  "signals": [
+    {"id": "2008_HVBAT_MAX_VOLT", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "millivolts" }, "name": "High voltage maximum voltage"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D871"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MAX_POWER_BAT_CAN_10", "path": "Battery", "fmt": { "len": 32, "max": 33551784, "min": -500, "mul": 1953, "div": 250000, "add": -500, "unit": "kilowatts" }, "name": "Maximum power the battery can withstand for 10 seconds"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D872"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MAX_POWER_BAT_CAN_30", "path": "Battery", "fmt": { "len": 32, "max": 33551784, "min": -500, "mul": 1953, "div": 250000, "add": -500, "unit": "kilowatts" }, "name": "Maximum power the battery can withstand for 30 seconds"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D873"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MAX_POWER_BAT_CAN_PROVIDE_10", "path": "Battery", "fmt": { "len": 32, "max": 33551784, "min": -500, "mul": 1953, "div": 250000, "add": -500, "unit": "kilowatts" }, "name": "Maximum power the battery can provide for 10 seconds"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D874"}, "freq": 1,
+  "signals": [
+    {"id": "2008_MAX_POWER_BAT_CAN_PROVIDE_30", "path": "Battery", "fmt": { "len": 32, "max": 33551784, "min": -500, "mul": 1953, "div": 250000, "add": -500, "unit": "kilowatts" }, "name": "Maximum power the battery can provide for 30 seconds"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D877"}, "freq": 5,
+  "signals": [
+    {"id": "2008_BAT_AVG_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery average temperature"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D878"}, "freq": 5,
+  "signals": [
+    {"id": "2008_T_DIFF_HOTEST", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "celsius" }, "name": "Temperature difference between the hottest and the coolest cells"}
+  ]},
+{ "hdr": "6B4", "rax": "694", "fcm1": true, "dbg": true, "cmd": {"22": "D87D"}, "freq": 5,
+  "signals": [
+    {"id": "2008_BAT_MIN_UNIT_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Battery min unit temperature"}
+  ]}
 ]
 }
