@@ -89,7 +89,7 @@
   ]},
 { "hdr": "6A6", "rax": "686", "fcm1": true, "dbg": true, "cmd": {"22": "DCB6"}, "freq": 0.25,
   "signals": [
-    {"id": "2008_ELEC_MACHINE_TQ", "path": "Engine", "fmt": { "len": 16, "max": 4915, "min": -1638, "div": 10, "add": -1638.3, "unit": "newtonMeters" }, "name": "Electric machine torque"}
+    {"id": "2008_ELEC_MACHINE_TQ", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Electric machine torque"}
   ]},
 { "hdr": "6A8", "rax": "688", "fcm1": true, "din": "C0", "dbg": true, "cmd": {"22": "D400"}, "freq": 0.25,
   "signals": [
